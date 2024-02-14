@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation1</title>
+    <style>
+        body{
+           
+            background: #000;
+            
+        }
+        #animations{
+            display: flex;
+            justify-content: space-evenly;
+            margin:40px auto;
+        }
+        .div1{
+            height: 100px;
+            width: 100px;
+            background: red;
+            animation-name: animation1;
+            animation-duration: 4s;
+            animation-delay: 1.2s;
+            text-align: center;
+        }
+        @keyframes animation1{
+            0%{background-color: red;}
+            25%{background-color: yellow;}
+            50%{background-color: green;}
+            75%{background-color: blue;}
+            100%{background-color: white;}
+        }
+    </style>
+    <style>
+        .div2{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: animation2;
+            animation-duration: 4s;
+            text-align: center;
+        }
+        @keyframes animation2{
+            0%{background-color: red; left: 0; top: 0;}
+            25%{background-color: yellow; left: 200px; top: 0;}
+            50%{background-color: green; left: 200px; top: 200px;}
+            75%{background-color: blue; left: 0; top: 200px;}
+            100%{background-color: white; left: 0; top:0 ;}
+        }
+    </style>
+    <style>
+        .div3{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: animation3;
+            animation-duration: 2s;
+            animation-iteration-count: 4;       /*iteration count can be infinite */
+            text-align: center;
+        }
+        @keyframes animation3{
+            0%{background-color: red; left: 0; top: 0;}
+            25%{background-color: yellow; left: 200px; top: 0;}
+            50%{background-color: green; left: 200px; top: 200px;}
+            75%{background-color: blue; left: 0; top: 200px;}
+            100%{background-color: white; left: 0; top:0 ;}
+        }
+    </style>
+    <style>
+        .div4{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: animation4;
+            animation-duration: 2s;
+            animation-iteration-count: 4;
+            animation-direction: alternate;
+            text-align: center;
+        }
+        @keyframes animation4{
+            0%{background-color: red; left: 0; top: 0;}
+            25%{background-color: yellow; left: 200px; top: 0;}
+            50%{background-color: green; left: 200px; top: 200px;}
+            75%{background-color: blue; left: 0; top: 200px;}
+            100%{background-color: white; left: 0; top:0 ;}
+        }
+    </style>
+
+    <style>
+        .speedcontrol{
+            color: white;
+            font-size: large;
+            width: 80%;
+            margin: 230px auto;
+        }
+        .speed{
+            height: 80px;
+            width: 100px;
+            background: #30cd05;
+            margin-top: 20px;
+            color: black;
+            font-size: larger;
+            text-align: center;
+            position: relative; 
+            animation: Mymove 3s;
+            animation-fill-mode: forwards;
+        }
+        #s1{animation-timing-function: linear;}
+        #s2{animation-timing-function: ease;}
+        #s3{animation-timing-function: ease-in;}
+        #s4{animation-timing-function: ease-out;}
+        #s5{animation-timing-function: ease-in-out;}
+       
+        @keyframes Mymove{
+            from{left: 0;}
+            to{left: 900px;}
+        }
+    </style>
+
+
+</head>
+<body>
+    <p style="color: white; font-size: larger; text-align: center;">Here are some examples of animations in css tried out by me</p>
+       
+    <div id="animations">
+        <div class="div1">Animation1</div>
+        <div class="div2">Animation2</div>
+        <div class="div3">Animation3</div>
+        <div class="div4">Animation4</div>
+    </div>
+    <div class="speedcontrol">
+        <p>The animation-timing-function property specifies the speed curve of the animation. The following example shows some of the different speed curves that can be used:</p>
+        <div class="speed" id="s1">linear</div>
+        <div class="speed" id="s2">ease</div>
+        <div class="speed" id="s3">ease-in</div>
+        <div class="speed" id="s4">ease-out</div>
+        <div class="speed" id="s5">ease-in-out</div>
+    </div>
+</body>
+</html>
